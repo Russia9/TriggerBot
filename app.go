@@ -13,7 +13,7 @@ var logger = logrus.New()
 func main() {
 	// Logger init
 	logger.Out = os.Stdout
-	logger.Info("Initializing ChatWars Broker")
+	logger.Info("Initializing Trigger Bot")
 
 	// Change logger log level
 	switch os.Getenv("CWBR_LOGLEVEL") {
