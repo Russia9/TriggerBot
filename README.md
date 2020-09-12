@@ -1,6 +1,7 @@
-# ChatWars Broker
-Собирает информацию о предложениях на бирже и помогает покупать
+# Trigger Bot
+Create and use custom triggers on your Discord server
 
 ## Used libraries
--  [`telebot`](https://github.com/tucnak/telebot) - Bot framework
 -  [`logrus`](https://github.com/sfirupsen/logrus) - Logging
+-  [`sentry-go`](https://github.com/getsentry/sentry-go) - Error
+   tracking
