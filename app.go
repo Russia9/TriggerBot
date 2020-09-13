@@ -55,5 +55,5 @@ func main() {
 	}
 	defer sentry.Flush(2 * time.Second)
 
-	// TODO: Bot init
+	InitBot(lib.GetEnv("TRG_TOKEN", ""), logger)
 }
