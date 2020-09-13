@@ -54,6 +54,12 @@ func main() {
 		logger.Warn("Sentry init error: ", err.Error())
 	}
 	defer sentry.Flush(2 * time.Second)
+	
+	token := os.Getenv("TRG_TOKEN")
+	if token == "" {
+		logger.Fatal("Empty token")
+		return
+	}
 
-	InitBot(lib.GetEnv("TRG_TOKEN", ""), logger)
+	InitBot(token, logger)
 }
