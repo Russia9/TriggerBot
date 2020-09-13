@@ -16,7 +16,7 @@ func main() {
 	logger.Info("Initializing Trigger Bot")
 
 	// Change logger log level
-	switch os.Getenv("CWBR_LOGLEVEL") {
+	switch os.Getenv("TRG_LOGLEVEL") {
 	case "TRACE":
 		logger.SetLevel(logrus.TraceLevel)
 		break
@@ -44,8 +44,8 @@ func main() {
 
 	// Sentry init
 	logger.Debug("Initializing Sentry")
-	SentryDSN := lib.GetEnv("CWBR_SENTRY_DSN", "")
-	SentryEnvironment := lib.GetEnv("CWBR_ENVIRONMENT", "production")
+	SentryDSN := lib.GetEnv("TRG_SENTRY_DSN", "")
+	SentryEnvironment := lib.GetEnv("TRG_ENVIRONMENT", "production")
 	err := sentry.Init(sentry.ClientOptions{
 		Dsn:         SentryDSN,
 		Environment: SentryEnvironment,
